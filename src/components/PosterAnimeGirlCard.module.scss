@@ -1,0 +1,61 @@
+.card {
+    @apply w-[450px] h-[606px] aspect-[7/10] flex flex-col;
+    background-image: url('../resources/poster1/posterTiles.svg');
+    background-size: 100%;
+    background-color: white;
+}
+
+$rectangle-color: #FFBB36;
+
+.posterInnerBlock {
+
+    @apply mx-10 h-[450px] my-auto flex relative flex-col justify-end items-center;
+
+    .bgRectangles {
+        @apply absolute flex flex-col justify-end bottom-0 h-[500px] left-0 right-0;
+
+        overflow: hidden;
+    }
+
+    .bgRecBig {
+        @apply w-[120%] -ml-[10%] h-[140px];
+        transform: rotate(-10deg) translateY(40px);
+        background-color: $rectangle-color;
+    }
+
+    .bgRecSmall {
+        @apply w-[120%] -ml-[10%] h-[60px] mt-[40px];
+        transform: rotate(-10deg);
+        background-color: $rectangle-color;
+
+    }
+}
+
+.girl {
+    @apply w-[300px] h-[400px];
+    background: no-repeat center url('../resources/poster1/girl.png');
+    background-size: cover;
+    z-index: 10;
+}
+
+.posterMainTextContainer {
+    @apply absolute top-[20px] left-[-40px] right-0 flex flex-row justify-center;
+
+
+    .posterMainText {
+        @apply relative text-[90px] flex justify-center w-full;
+
+        .text {
+            @apply absolute font-bold;
+            color: $rectangle-color;
+            transform: rotate(-10deg);
+        }
+
+        .outlineText {
+
+            color: transparent;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: $rectangle-color;
+        }
+    }
+}
